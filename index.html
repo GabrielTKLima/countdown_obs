@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBS Countdown Configurável</title>
+    <!-- Conecta o arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Display que aparece na live -->
+    <div id="display-container" title="Dê um duplo clique para abrir/fechar as configurações">
+        <div id="timer-display">00:00</div>
+    </div>
+
+    <!-- Painel de Controle -->
+    <div id="config-panel">
+        <div class="config-title">⚙️ Configurar Countdown</div>
+        
+        <div class="input-group">
+            <div class="field">
+                <label for="minutes">Minutos:</label>
+                <input type="number" id="minutes" min="0" max="99" value="5">
+            </div>
+            <div class="field">
+                <label for="seconds">Segundos:</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="end-text">Texto Final:</label>
+            <input type="text" id="end-text" value="INICIANDO">
+        </div>
+
+        <div class="btn-group">
+            <button id="btn-start">Iniciar / Continuar</button>
+            <button id="btn-pause" class="btn-secondary">Pausar</button>
+            <button id="btn-reset" class="btn-secondary">Reiniciar Tempo</button>
+        </div>
+
+        <div class="hint">💡 <strong>Dica de Ouro:</strong> Dê um <strong>duplo clique</strong> em qualquer lugar da tela para mostrar ou esconder este painel!</div>
+    </div>
+
+    <!-- Conecta o arquivo de script no final para carregar após os elementos -->
+    <script src="script.js"></script>
+</body>
+</html>
